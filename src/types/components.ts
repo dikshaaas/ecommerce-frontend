@@ -11,3 +11,12 @@ export type CategoryCardProps= {
     name: string;
     image: string;
 };
+
+export type BrandBannerProps= {
+    name: string;
+    image: string;
+    logo: string;
+    offer: string;
+    background: string;
+    textColor: string;
+}

@@ -9,6 +9,12 @@ import furniture from "./sofa.png"
 import watch from "./watch.png"
 import plant from "./decor.png"
 import access from "./earring.png"
+import iphone from "./iphone.png"
+import apple from "./apple.png"
+import realme from "./realme.png"
+import phonereal from "./realmephone.png"
+import phonexiao from "./xiaomiphone.png"
+import xiaomi from "./xiaomi.png"
 export{
     samsungs22,
     samsungm13,
@@ -20,5 +26,11 @@ export{
     furniture,
     watch,
     plant,
-    access
+    access, 
+    iphone, 
+    apple, 
+    realme, 
+    phonereal,
+    phonexiao, 
+    xiaomi
 }

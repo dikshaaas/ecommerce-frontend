@@ -1,8 +1,9 @@
 import SectionHeader from "../components/common/SectionHeader";
 import ProductCard from "../components/ecommerce/ProductCard";
 import "./HomePage.css"
-import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access } from "../assets/images";
+import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access, iphone, apple, realme, phonereal, phonexiao, xiaomi } from "../assets/images";
 import CategoryCard from "../components/ecommerce/CategoryCard";
+import BrandBanner from "../components/ecommerce/BrandBanner";
 
 
 function HomePage(){
@@ -92,6 +93,41 @@ function HomePage(){
                         image={access}
                     />
                 </div>
+            </section>
+            <section className="brand-section">
+                <SectionHeader
+                    title="Top"
+                    highlightedText="Electronic Brands"
+                />
+                <div className="brand-grid">
+                <BrandBanner
+                    name="Iphone"
+                    image={iphone}
+                    logo={apple}
+                    offer="UP to 80% OFF"
+                    background="#313131"
+                    textColor="white"
+                />
+                <BrandBanner
+                    name="Realme"
+                    image={phonereal}
+                    logo={realme}
+                    offer="UP to 80% OFF"
+                    background="#F6DE8D"
+                    textColor="black"
+                />
+                <BrandBanner
+                    name="Xiaomi"
+                    image={phonexiao}
+                    logo={xiaomi}
+                    offer="UP to 80% OFF"
+                    background="#FFECDF"
+                    textColor="black"
+                />
+
+                </div>
+
+
             </section>
         </main>
     )
