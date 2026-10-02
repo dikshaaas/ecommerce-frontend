@@ -1,7 +1,8 @@
 import SectionHeader from "../components/common/SectionHeader";
 import ProductCard from "../components/ecommerce/ProductCard";
 import "./HomePage.css"
-import { samsungs22, samsungm13, samsungm33, samsungm53 } from "../assets/images";
+import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access } from "../assets/images";
+import CategoryCard from "../components/ecommerce/CategoryCard";
 
 
 function HomePage(){
@@ -53,6 +54,42 @@ function HomePage(){
                         oldPrice="₹85999"
                         discount="56% OFF"
                         saveText="Save ₹18000"
+                    />
+                </div>
+            </section>
+            <section className="category-section">
+                <SectionHeader
+                    title="Shop from"
+                    highlightedText="Top Categories"
+                />
+                <div className="category-grid">
+                    <CategoryCard
+                        name="Mobile"
+                        image={phone}
+                    />
+                    <CategoryCard
+                        name="Cosmetics"
+                        image={cosmetic}
+                    />
+                    <CategoryCard
+                        name="Electronics"
+                        image={washingm}
+                    />
+                    <CategoryCard
+                        name="Furniture"
+                        image={furniture}
+                    />
+                    <CategoryCard
+                        name="Watches"
+                        image={watch}
+                    />
+                    <CategoryCard
+                        name="Decor"
+                        image={plant}
+                    />
+                    <CategoryCard
+                        name="Accessories"
+                        image={access}
                     />
                 </div>
             </section>

@@ -1,0 +1,90 @@
+:root {
+  /* ================================
+     Colors
+     ================================ */
+/* ================================
+   Colors
+   ================================ */
+
+--color-white: #ffffff;
+--color-background: #ffffff;
+
+--color-primary: #008ecc;
+
+--color-background-topbar: #f5f5f5;
+--color-background-nav-pill: #f3f9fb;
+
+--color-hero-background: #212844;
+
+
+
+  /* ================================
+     Typography
+     ================================ */
+
+  --font-family-base:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+
+  /* ================================
+     Layout
+     ================================ */
+
+  --container-max-width: 1201px;
+
+  --topbar-height: 42px;
+  --main-header-height: 90px;
+  --navbar-height: 69px;
+
+  --hero-height: 316px;
+
+
+  /* ================================
+     Spacing
+     ================================ */
+
+  --nav-pill-padding-y: 9px;
+  --nav-pill-padding-x: 14px;
+  --nav-pill-gap: 10px;
+
+  --hero-content-offset-x: 90px;
+  --hero-content-offset-y: 40px;
+
+
+  /* ================================
+     Border Radius
+     ================================ */
+
+  --radius-hero: 16px;
+  --radius-nav-pill: 18px;
+
+
+  /* Hero */
+
+  --hero-image-width: 268px;
+  --hero-image-height: 270px;
+
+  --hero-pagination-width: 114px;
+  --hero-pagination-height: 8px;
+
+  --hero-navigation-size: 86px;
+
+
+  /* Transitions*/
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+
+     /* Z-Index*/
+
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 300;
+}

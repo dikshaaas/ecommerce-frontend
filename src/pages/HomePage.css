@@ -3,8 +3,19 @@
   margin: 0 auto;
 }
 
+.category-section {
+  width: min(1201px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
 .product-grid {
   display: flex;
   gap: 18px;
+  margin-top: 24px;
+}
+
+.category-grid {
+  display: flex;
+  gap: 50px;
   margin-top: 24px;
 }
