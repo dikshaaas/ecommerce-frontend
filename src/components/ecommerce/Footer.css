@@ -1,0 +1,8 @@
+.footer-grid{
+    background-color:#008ECC ;
+    color: white;
+      display: flex;
+  gap: 18px;
+  margin-top: 50px;
+
+}

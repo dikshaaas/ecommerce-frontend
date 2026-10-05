@@ -15,6 +15,12 @@ import realme from "./realme.png"
 import phonereal from "./realmephone.png"
 import phonexiao from "./xiaomiphone.png"
 import xiaomi from "./xiaomi.png"
+import dailyess from "./essential.png"
+import vegetable from "./vegetable.png"
+import fruits from "./fruits.png"
+import strawberry from "./strawberry.png"
+import mango from "./mango.png"
+import cherry from "./cherry.png"
 export{
     samsungs22,
     samsungm13,
@@ -32,5 +38,11 @@ export{
     realme, 
     phonereal,
     phonexiao, 
-    xiaomi
+    xiaomi,
+    dailyess,
+    vegetable,
+    fruits,
+    strawberry,
+    mango, 
+    cherry,
 }

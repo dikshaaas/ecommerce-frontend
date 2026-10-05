@@ -1,0 +1,69 @@
+.essential-card {
+  width: 187px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: white;
+}
+
+
+/* Image */
+
+.essential-image-wrapper {
+  width: 187px;
+  height: 187px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f5f5;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+.essential-image {
+  width: 187px;
+  height: 187px;
+
+  object-fit: contain;
+}
+
+
+/* Text */
+
+.textfield {
+  width: 187px;
+
+  margin-top: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.essential-name p {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+
+  text-align: center;
+}
+
+.essential-offer p {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+
+  text-align: center;
+}

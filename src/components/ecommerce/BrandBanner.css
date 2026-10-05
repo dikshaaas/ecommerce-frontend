@@ -2,10 +2,10 @@
   width: 389px;
   height: 207px;
 
+  position: relative;
+
   border-radius: 16px;
   overflow: hidden;
-
-  position: relative;
 }
 
 .brand-background {
@@ -17,24 +17,30 @@
   border-radius: 16px;
 }
 
-
 .brand-name {
   position: absolute;
 
   top: 20px;
-  left: 9px;
+  left: 20px;
 
   width: 99px;
   height: 35px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.12);
+
+  border-radius: 8px;
+
+  z-index: 2;
 }
+
 
 .brand-name p {
   margin: 0;
 }
-
 
 .brand-logo {
   position: absolute;
@@ -43,16 +49,20 @@
   height: 62px;
 
   object-fit: contain;
+
   top: 70px;
   left: 20px;
-}
 
+  z-index: 2;
+}
 
 .brand-offer {
   position: absolute;
 
   left: 20px;
   bottom: 20px;
+
+  z-index: 2;
 }
 
 .brand-offer h3 {
@@ -74,11 +84,38 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+
+  z-index: 2;
 }
 
 .brand-image {
-  width: 150px;
-  height: 190px;
+  width: 100%;
+  height: 100%;
 
   object-fit: contain;
+}
+
+.brand-circle {
+  width: 226px;
+  height: 226px;
+
+  position: absolute;
+
+  top: -43px;
+  right: -49px;
+
+  border: 1px solid;
+
+  border-radius: 50%;
+
+  padding: 10px;
+
+  z-index: 1;
+}
+
+.brand-circle-inner {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
 }

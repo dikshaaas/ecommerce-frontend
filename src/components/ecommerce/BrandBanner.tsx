@@ -8,17 +8,24 @@ function BrandBanner({
   offer,
   background,
   textColor,
+  circleColor,
+  brandLabelColor,
 }: BrandBannerProps) {
   return (
     <article className="brand-card">
       <div
         className="brand-background"
         style={{
-          background,
+          backgroundColor: background,
           color: textColor,
         }}
       >
-        <div className="brand-name">
+        <div className="brand-name"
+              style={{
+                backgroundColor: brandLabelColor,
+              }}
+        
+        >
           <p>{name}</p>
         </div>
 
@@ -38,6 +45,21 @@ function BrandBanner({
             alt={name}
             className="brand-image"
           />
+        </div>
+
+        <div className="brand-circle"
+              style={{
+                borderColor: circleColor,
+              }}
+        >
+          <div
+            className="brand-circle-inner"
+            style={{
+              backgroundColor: circleColor,
+            }}
+      
+      />
+
         </div>
       </div>
     </article>

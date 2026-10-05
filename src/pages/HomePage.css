@@ -33,3 +33,15 @@
   margin-top: 50px;
   margin-bottom: 100px;
 }
+
+.essential-section{
+    width: min(1201px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.essential-grid{
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}

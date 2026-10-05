@@ -1,10 +1,11 @@
 import SectionHeader from "../components/common/SectionHeader";
 import ProductCard from "../components/ecommerce/ProductCard";
 import "./HomePage.css"
-import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access, iphone, apple, realme, phonereal, phonexiao, xiaomi } from "../assets/images";
+import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access, iphone, apple, realme, phonereal, phonexiao, xiaomi, dailyess, vegetable, fruits, strawberry, mango, cherry } from "../assets/images";
 import CategoryCard from "../components/ecommerce/CategoryCard";
 import BrandBanner from "../components/ecommerce/BrandBanner";
-
+import EssentialCard from "../components/ecommerce/EssentialCard";
+import Footer from "../components/ecommerce/Footer";
 
 function HomePage(){
     return(
@@ -107,14 +108,18 @@ function HomePage(){
                     offer="UP to 80% OFF"
                     background="#313131"
                     textColor="white"
+                    circleColor="#404040"
+                    brandLabelColor="#494949"
                 />
                 <BrandBanner
                     name="Realme"
                     image={phonereal}
                     logo={realme}
                     offer="UP to 80% OFF"
-                    background="#F6DE8D"
+                    background="#FFF3CC"
                     textColor="black"
+                    circleColor="#F6DE8D"
+                    brandLabelColor="#F6DE8D"
                 />
                 <BrandBanner
                     name="Xiaomi"
@@ -123,13 +128,55 @@ function HomePage(){
                     offer="UP to 80% OFF"
                     background="#FFECDF"
                     textColor="black"
+                    circleColor="#FFD1B0"
+                    brandLabelColor="#FFD1B0"
+
                 />
-
+             </div>
+            </section>
+            <section className="essential-section">
+                <SectionHeader
+                    title="Daily"
+                    highlightedText="Essentials"
+                />
+                <div className="essential-grid">
+                    <EssentialCard
+                        name="Daily Essentials"
+                        offer="UP to 50% OFF"
+                        image={dailyess}
+                    />
+                    <EssentialCard
+                        name="Vegetables"
+                        offer="UP to 50% OFF"
+                        image={vegetable}
+                    />
+                    <EssentialCard
+                        name="Fruits"
+                        offer="UP to 50% OFF"
+                        image={fruits}
+                    />
+                    <EssentialCard
+                        name="Strawberry"
+                        offer="UP to 50% OFF"
+                        image={strawberry}
+                    />
+                    <EssentialCard
+                        name="Mango"
+                        offer="UP to 50% OFF"
+                        image={mango}
+                    />
+                    <EssentialCard
+                        name="Cherry"
+                        offer="UP to 50% OFF"
+                        image={cherry}
+                    />
                 </div>
-
-
+            </section>
+            <section className="footer">
+                <Footer/>
             </section>
         </main>
+
     )
 }
 export default HomePage
