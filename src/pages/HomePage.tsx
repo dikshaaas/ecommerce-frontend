@@ -7,6 +7,8 @@ import BrandBanner from "../components/ecommerce/BrandBanner";
 import EssentialCard from "../components/ecommerce/EssentialCard";
 import Footer from "../components/ecommerce/Footer";
 import TopBar from "../components/layout/TopBar";
+import Header from "../components/layout/Header";
+import NavBar from "../components/layout/NavBar";
 
 function HomePage(){
     return(
@@ -15,6 +17,15 @@ function HomePage(){
                 <TopBar/>
 
             </section>
+            <section className="header-section">
+                 <Header/>
+            </section>
+
+            <section className="navbar-section">
+                 <NavBar/>
+            </section>
+
+
             <section className="smartphone-section">
                 <SectionHeader
                     title="Grab the best deal on"

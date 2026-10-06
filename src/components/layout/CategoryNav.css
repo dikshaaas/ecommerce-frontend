@@ -1,0 +1,28 @@
+.nav-pill {
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 0 16px;
+
+  background-color: #f3f9fb;
+  border-radius: 18px;
+}
+
+
+.nav-pill span {
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.nav-pill img {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+}

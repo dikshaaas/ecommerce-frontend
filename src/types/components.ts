@@ -28,3 +28,7 @@ export type EssentialProps= {
     offer: string;
     image: string;
 }
+
+export type CategoryNavProps= {
+    name: string;
+}
