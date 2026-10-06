@@ -1,0 +1,29 @@
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-active {
+  width: 24px;
+  height: 6px;
+
+  border-radius: 3px;
+}
+
+.pagination-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background-color: #d9d9d9;
+}
+
+.pagination-white .pagination-active {
+  background-color: #ffffff;
+}
+
+.pagination-blue .pagination-active {
+  background-color: #008ecc;
+}

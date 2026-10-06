@@ -9,22 +9,33 @@ import Footer from "../components/ecommerce/Footer";
 import TopBar from "../components/layout/TopBar";
 import Header from "../components/layout/Header";
 import NavBar from "../components/layout/NavBar";
+import HeroBanner from "../components/ecommerce/HeroBanner";
+import herowatch from "../assets/icons/watchehero.svg";
+import Pagination from "../components/common/Pagination";
 
-function HomePage(){
-    return(
+function HomePage() {
+    return (
         <main>
             <section className="top-bar-section">
-                <TopBar/>
+                <TopBar />
 
             </section>
             <section className="header-section">
-                 <Header/>
+                <Header />
             </section>
 
             <section className="navbar-section">
-                 <NavBar/>
+                <NavBar />
             </section>
 
+            <section className="hero-section">
+                <HeroBanner
+                    title="SMART WEARABLE."
+                    subtitle="Best deal online on smart watches"
+                    offer="UP to 80% OFF"
+                    image={herowatch}
+                />
+            </section>
 
             <section className="smartphone-section">
                 <SectionHeader
@@ -117,38 +128,42 @@ function HomePage(){
                     highlightedText="Electronic Brands"
                 />
                 <div className="brand-grid">
-                <BrandBanner
-                    name="Iphone"
-                    image={iphone}
-                    logo={apple}
-                    offer="UP to 80% OFF"
-                    background="#313131"
-                    textColor="white"
-                    circleColor="#404040"
-                    brandLabelColor="#494949"
-                />
-                <BrandBanner
-                    name="Realme"
-                    image={phonereal}
-                    logo={realme}
-                    offer="UP to 80% OFF"
-                    background="#FFF3CC"
-                    textColor="black"
-                    circleColor="#F6DE8D"
-                    brandLabelColor="#F6DE8D"
-                />
-                <BrandBanner
-                    name="Xiaomi"
-                    image={phonexiao}
-                    logo={xiaomi}
-                    offer="UP to 80% OFF"
-                    background="#FFECDF"
-                    textColor="black"
-                    circleColor="#FFD1B0"
-                    brandLabelColor="#FFD1B0"
+                    <BrandBanner
+                        name="Iphone"
+                        image={iphone}
+                        logo={apple}
+                        offer="UP to 80% OFF"
+                        background="#313131"
+                        textColor="white"
+                        circleColor="#404040"
+                        brandLabelColor="#494949"
+                    />
+                    <BrandBanner
+                        name="Realme"
+                        image={phonereal}
+                        logo={realme}
+                        offer="UP to 80% OFF"
+                        background="#FFF3CC"
+                        textColor="black"
+                        circleColor="#F6DE8D"
+                        brandLabelColor="#F6DE8D"
+                    />
+                    <BrandBanner
+                        name="Xiaomi"
+                        image={phonexiao}
+                        logo={xiaomi}
+                        offer="UP to 80% OFF"
+                        background="#FFECDF"
+                        textColor="black"
+                        circleColor="#FFD1B0"
+                        brandLabelColor="#FFD1B0"
 
-                />
-             </div>
+                    />
+                </div>
+                    <div className="brand-pagination">
+                        <Pagination variant="blue" />
+                    </div>
+
             </section>
             <section className="essential-section">
                 <SectionHeader
@@ -189,7 +204,7 @@ function HomePage(){
                 </div>
             </section>
             <section className="footer">
-                <Footer/>
+                <Footer />
             </section>
         </main>
 
