@@ -6,10 +6,15 @@ import CategoryCard from "../components/ecommerce/CategoryCard";
 import BrandBanner from "../components/ecommerce/BrandBanner";
 import EssentialCard from "../components/ecommerce/EssentialCard";
 import Footer from "../components/ecommerce/Footer";
+import TopBar from "../components/layout/TopBar";
 
 function HomePage(){
     return(
         <main>
+            <section className="top-bar-section">
+                <TopBar/>
+
+            </section>
             <section className="smartphone-section">
                 <SectionHeader
                     title="Grab the best deal on"
