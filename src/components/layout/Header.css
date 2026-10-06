@@ -1,87 +1,85 @@
 .header {
   width: 100%;
-  height: 90px;
+  min-height: 90px;
 
   background-color: #ffffff;
-
   border-bottom: 1px solid #EDEDED;
+  display: flex;
+  align-items: center;
 }
 
 .header-inner {
-  width: 1200px;
-  height: 100%;
+  width: min(1200px, calc(100% - 32px));
+  min-height: 90px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 }
 
 /* Logo */
 
 .header-logo {
-  width: 48px;
-  height: 48px;
-
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .header-logo img {
-  width: 48px;
-  height: 48px;
-  margin-left: 150px ;
+  width: 44px;
+  height: 44px;
+  margin-left: 0;
   object-fit: contain;
 }
-.header-logo p{
-    width: 138px;
-    height: 28px;
-    color: #008ecc;
-    gap: 15px;
-    margin-left: 15px;
-    font-size: 28px;
+
+.header-logo p {
+  margin: 0;
+  color: #008ecc;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
 }
 
+.search-box-wrapper {
+  flex: 1;
+  max-width: 507px;
+}
 
 /* Login + Cart */
 
 .header-actions {
-  width: 241px;
-  height: 24px;
-
   display: flex;
   align-items: center;
-
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .header-login {
-  width: 159px;
-  height: 24px;
-
   display: flex;
   align-items: center;
-
-  gap: 4px;
+  gap: 6px;
+  cursor: pointer;
 }
 
 .header-action-icon {
   width: 24px;
   height: 24px;
-
   flex-shrink: 0;
 }
 
 .header-login-text {
   display: flex;
   align-items: center;
-
   gap: 4px;
 
   font-size: 14px;
   line-height: 18px;
   color: #000000;
+  white-space: nowrap;
 }
 
 .header-divider {
@@ -89,20 +87,55 @@
   height: 18px;
 
   background-color: #d9d9d9;
-
   flex-shrink: 0;
 }
 
 .header-cart {
-  width: 62px;
-  height: 24px;
-
   display: flex;
   align-items: center;
-
-  gap: 4px;
+  gap: 6px;
+  cursor: pointer;
 
   font-size: 14px;
   line-height: 18px;
   color: #000000;
+  white-space: nowrap;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    min-height: auto;
+    gap: 12px;
+  }
+
+  .search-box-wrapper {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header-logo p {
+    font-size: 22px;
+  }
+
+  .header-logo img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-login-text span:last-child {
+    display: none;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
 }

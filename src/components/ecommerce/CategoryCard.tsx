@@ -3,13 +3,14 @@ import "./CategoryCard.css"
 function CategoryCard({
     name,
     image,
-}: CategoryCardProps){
-    return(
-        <article className="category-card">
-            <div className="category-circle">
-                <img 
-                    src={image} 
-                    alt={name} 
+    active = false,
+}: CategoryCardProps) {
+    return (
+        <article className={`category-card ${active ? "category-card-active" : ""}`}>
+            <div className={`category-circle ${active ? "category-circle-active" : ""}`}>
+                <img
+                    src={image}
+                    alt={name}
                     className="category-image"
                 />
             </div>

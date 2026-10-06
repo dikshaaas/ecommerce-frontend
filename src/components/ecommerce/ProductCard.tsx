@@ -2,20 +2,21 @@ import type { ProductCardProps } from "../../types/components";
 import "./ProductCard.css";
 
 function ProductCard({
-    name, 
-    image, 
-    price, 
+    name,
+    image,
+    price,
     oldPrice,
-    discount, 
+    discount,
     saveText,
-}: ProductCardProps){
-    return(
-        <article className="product-card">
+    active = false,
+}: ProductCardProps) {
+    return (
+        <article className={`product-card ${active ? "product-card-active" : ""}`}>
             <div className="product-image-wrapper">
-                <img 
-                    src={image} 
+                <img
+                    src={image}
                     alt={image}
-                    className="product-image" 
+                    className="product-image"
                 />
 
                 <span className="discount-badge">
@@ -27,14 +28,14 @@ function ProductCard({
 
                 <div className="product-price">
                     <strong>{price}</strong>
-                    
-                    {oldPrice &&(
+
+                    {oldPrice && (
                         <span className="old-price">
                             {oldPrice}
                         </span>
                     )}
                 </div>
-                
+
                 <p className="save-text">
                     {saveText}
                 </p>

@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <CategoryNav name="Groceries" />
+        <CategoryNav name="Groceries" active={true} />
         <CategoryNav name="Premium Fruits" />
         <CategoryNav name="Home & Kitchen" />
         <CategoryNav name="Fashion" />

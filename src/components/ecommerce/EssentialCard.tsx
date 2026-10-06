@@ -5,9 +5,10 @@ function EssentialCard({
   name,
   offer,
   image,
+  active = false,
 }: EssentialProps) {
   return (
-    <article className="essential-card">
+    <article className={`essential-card ${active ? "essential-card-active" : ""}`}>
       <div className="essential-image-wrapper">
         <img
           src={image}

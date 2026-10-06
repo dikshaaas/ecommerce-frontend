@@ -1,34 +1,48 @@
 .essential-card {
-  width: 187px;
+  width: 100%;
+  max-width: 187px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
   background-color: white;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 
 /* Image */
 
 .essential-image-wrapper {
-  width: 187px;
-  height: 187px;
+  width: 100%;
+  max-width: 187px;
+  aspect-ratio: 1;
+  height: auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: #f5f5f5;
+  border: 2px solid transparent;
 
   border-radius: 16px;
 
   overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.essential-card-active .essential-image-wrapper,
+.essential-card:hover .essential-image-wrapper {
+  border-color: #008ecc;
+  box-shadow: 0 4px 14px rgba(0, 142, 204, 0.2);
+  background-color: #f3f9fb;
 }
 
 .essential-image {
-  width: 187px;
-  height: 187px;
+  width: 100%;
+  height: 100%;
 
   object-fit: contain;
 }
@@ -37,7 +51,7 @@
 /* Text */
 
 .textfield {
-  width: 187px;
+  width: 100%;
 
   margin-top: 12px;
 

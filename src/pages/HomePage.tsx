@@ -95,6 +95,7 @@ function HomePage() {
                     <CategoryCard
                         name="Mobile"
                         image={phone}
+                        active={true}
                     />
                     <CategoryCard
                         name="Cosmetics"
@@ -160,9 +161,9 @@ function HomePage() {
 
                     />
                 </div>
-                    <div className="brand-pagination">
-                        <Pagination variant="blue" />
-                    </div>
+                <div className="brand-pagination">
+                    <Pagination variant="blue" />
+                </div>
 
             </section>
             <section className="essential-section">
@@ -175,6 +176,7 @@ function HomePage() {
                         name="Daily Essentials"
                         offer="UP to 50% OFF"
                         image={dailyess}
+                        active={true}
                     />
                     <EssentialCard
                         name="Vegetables"

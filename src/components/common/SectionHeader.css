@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .section-header h2 {
@@ -25,6 +26,7 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .section-header-line {
@@ -41,14 +43,24 @@
   left: 0;
   top: 0;
 
-  width: 250px;
+  width: min(250px, 40%);
   height: 3px;
 
   background-color: #008ECC;
 }
 
-.view-all-chevron{
-    margin-left: 4px;
-    color: #008ECC;
-    font-size: 24px;
+.view-all-chevron {
+  margin-left: 4px;
+  color: #008ECC;
+  font-size: 24px;
+}
+
+@media (max-width: 640px) {
+  .section-header h2 {
+    font-size: 18px;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
 }

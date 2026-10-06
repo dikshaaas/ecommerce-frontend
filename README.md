@@ -1,75 +1,105 @@
-# React + TypeScript + Vite
+# MegaMart — Ecommerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive ecommerce website built with **React**, **TypeScript**, and **Vite**, replicating the Figma design reference.
 
-Currently, two official plugins are available:
+## Project Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project is an intern frontend development task designed to demonstrate:
+- **Figma-to-React Implementation**: Analyzing visual designs, slicing them into structured UI sections, and translating them into accurate React components.
+- **Component Reusability & Props**: Building modular, reusable UI components (`ProductCard`, `CategoryCard`, `BrandBanner`, `EssentialCard`, etc.) and passing dynamic content via TypeScript props.
+- **Responsive Web Design**: Ensuring full responsiveness across Desktop, Tablet, and Mobile screen viewports.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Technology Stack
 
-## Expanding the ESLint configuration
+- **Framework / Bundler**: React 19 + Vite
+- **Language**: TypeScript
+- **Styling**: Vanilla CSS (CSS Modules / Component-level CSS)
+- **Icons & Assets**: SVG / Vector graphics & PNG image assets
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 1. Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Ensure you have [Node.js](https://nodejs.org/) (v18+) installed on your machine.
 
+### 2. Installation
+
+Clone the repository and install project dependencies:
+
+```bash
+git clone <repository-url>
+cd ecommerce-frontend
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Run Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the Vite development server:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run dev
 ```
+
+Open `http://localhost:5173` in your browser.
+
+### 4. Build for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+---
+
+## Project Structure
+
+```text
+src/
+├── assets/             # Icons and product image assets
+├── components/
+│   ├── common/         # Reusable generic UI (SectionHeader, Pagination)
+│   ├── layout/         # Header, TopBar, NavBar, SearchBar, CategoryNav
+│   └── ecommerce/      # ProductCard, CategoryCard, BrandBanner, EssentialCard, HeroBanner, Footer
+├── pages/              # Page-level views (HomePage)
+├── types/              # TypeScript prop interfaces & types
+├── App.tsx             # Root component
+├── main.tsx            # Entry point
+└── index.css           # Global reset & typography
+```
+
+---
+
+## Component Reusability Examples
+
+Each component is designed to receive content dynamically through TypeScript typed props:
+
+```tsx
+<ProductCard
+  name="Galaxy S22 Ultra"
+  image={samsungs22}
+  price="₹32999"
+  oldPrice="₹74999"
+  discount="56% OFF"
+  saveText="Save ₹32999"
+/>
+```
+
+```tsx
+<CategoryCard
+  name="Electronics"
+  image={washingm}
+/>
+```
+
+---
+
+## Responsive Breakpoints
+
+- **Desktop (1200px+)**: Full grid layout matching original Figma frame specifications.
+- **Tablet (768px – 1024px)**: 3-column product grid, wrapped brand banners, and adjusted margins.
+- **Mobile (< 768px / 480px)**: 2-column product grid, horizontally scrollable category bar, stacked header & hero banner, and touch-optimized navigation.
