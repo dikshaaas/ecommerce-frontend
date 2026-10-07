@@ -12,7 +12,6 @@ function CategoryNav({
 
       <img
         src={downarrow}
-        alt=""
         className="nav-pill-arrow"
       />
     </div>

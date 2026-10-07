@@ -31,7 +31,7 @@ function HomePage() {
             <section className="hero-section">
                 <HeroBanner
                     title="SMART WEARABLE."
-                    subtitle="Best deal online on smart watches"
+                    subtitle="Best Deal Online on smart watches"
                     offer="UP to 80% OFF"
                     image={herowatch}
                 />
@@ -95,7 +95,7 @@ function HomePage() {
                     <CategoryCard
                         name="Mobile"
                         image={phone}
-                        active={true}
+                        active={false}
                     />
                     <CategoryCard
                         name="Cosmetics"
@@ -130,7 +130,7 @@ function HomePage() {
                 />
                 <div className="brand-grid">
                     <BrandBanner
-                        name="Iphone"
+                        name="IPHONE"
                         image={iphone}
                         logo={apple}
                         offer="UP to 80% OFF"
@@ -140,7 +140,7 @@ function HomePage() {
                         brandLabelColor="#494949"
                     />
                     <BrandBanner
-                        name="Realme"
+                        name="REALME"
                         image={phonereal}
                         logo={realme}
                         offer="UP to 80% OFF"
@@ -150,7 +150,7 @@ function HomePage() {
                         brandLabelColor="#F6DE8D"
                     />
                     <BrandBanner
-                        name="Xiaomi"
+                        name="XIAOMI"
                         image={phonexiao}
                         logo={xiaomi}
                         offer="UP to 80% OFF"
@@ -176,7 +176,7 @@ function HomePage() {
                         name="Daily Essentials"
                         offer="UP to 50% OFF"
                         image={dailyess}
-                        active={true}
+                        active={false}
                     />
                     <EssentialCard
                         name="Vegetables"

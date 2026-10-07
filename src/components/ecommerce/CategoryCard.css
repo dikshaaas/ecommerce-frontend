@@ -1,8 +1,5 @@
 .category-card {
   width: 100%;
-  max-width: 132px;
-  height: 172px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,8 +8,8 @@
 }
 
 .category-circle {
-  width: 120px;
-  height: 120px;
+  width: min(120px, 100%);
+  aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -26,20 +23,16 @@
 .category-circle-active,
 .category-card:hover .category-circle {
   border-color: #008ecc;
-  box-shadow: 0 4px 14px rgba(0, 142, 204, 0.25);
-  background-color: #f3f9fb;
 }
 
 .category-image {
-  width: 75px;
-  height: 98px;
-
+  width: 62%;
+  height: 82%;
   object-fit: contain;
 }
 
 .category-info {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,5 +41,29 @@
 .category-info h3 {
   margin: 0;
   font-size: 14px;
-  margin-top: 24px;
+  margin-top: 16px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .category-circle {
+    width: min(100px, 100%);
+  }
+
+  .category-info h3 {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .category-circle {
+    width: min(80px, 100%);
+  }
+
+  .category-info h3 {
+    font-size: 11px;
+    margin-top: 8px;
+  }
 }

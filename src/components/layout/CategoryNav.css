@@ -6,12 +6,12 @@
   justify-content: center;
 
   gap: 6px;
-
   padding: 0 16px;
 
   background-color: #f3f9fb;
   border-radius: 18px;
   cursor: pointer;
+
   transition: all 0.2s ease;
 }
 
@@ -25,21 +25,20 @@
 .nav-pill-arrow {
   width: 14px;
   height: 14px;
-
   flex-shrink: 0;
-  transition: filter 0.2s ease;
 }
 
+.nav-pill:hover,
 .nav-pill-active {
   background-color: #008ecc;
-  box-shadow: 0 2px 8px rgba(0, 142, 204, 0.35);
 }
 
+.nav-pill:hover span,
 .nav-pill-active span {
   color: #ffffff;
-  font-weight: 600;
 }
 
+.nav-pill:hover .nav-pill-arrow,
 .nav-pill-active .nav-pill-arrow {
   filter: brightness(0) invert(1);
 }

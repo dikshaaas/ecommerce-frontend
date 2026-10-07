@@ -19,7 +19,6 @@
   gap: 20px;
 }
 
-/* Logo */
 
 .header-logo {
   display: flex;
@@ -49,7 +48,6 @@
   max-width: 507px;
 }
 
-/* Login + Cart */
 
 .header-actions {
   display: flex;

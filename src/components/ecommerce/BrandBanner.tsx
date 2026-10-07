@@ -1,5 +1,4 @@
 import type { BrandBannerProps } from "../../types/components";
-
 import "./BrandBanner.css";
 
 function BrandBanner({
