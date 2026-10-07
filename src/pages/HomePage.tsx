@@ -183,11 +183,11 @@ function HomePage() {
                         offer="UP to 50% OFF"
                         image={vegetable}
                     />
-                    <EssentialCard
+                    {/* <EssentialCard
                         name="Fruits"
                         offer="UP to 50% OFF"
                         image={fruits}
-                    />
+                    /> */}
                     <EssentialCard
                         name="Strawberry"
                         offer="UP to 50% OFF"
