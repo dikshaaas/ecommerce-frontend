@@ -1,17 +1,17 @@
+import herowatch from "../assets/icons/watchehero.svg";
+import { access, apple, cherry, cosmetic, dailyess, furniture, iphone, mango, phone, phonereal, phonexiao, plant, realme, samsungm13, samsungm33, samsungm53, samsungs22, strawberry, vegetable, washingm, watch, xiaomi } from "../assets/images";
+import Pagination from "../components/common/Pagination";
 import SectionHeader from "../components/common/SectionHeader";
-import ProductCard from "../components/ecommerce/ProductCard";
-import "./HomePage.css"
-import { samsungs22, samsungm13, samsungm33, samsungm53, cosmetic, washingm, phone, furniture, watch, plant, access, iphone, apple, realme, phonereal, phonexiao, xiaomi, dailyess, vegetable, fruits, strawberry, mango, cherry } from "../assets/images";
-import CategoryCard from "../components/ecommerce/CategoryCard";
 import BrandBanner from "../components/ecommerce/BrandBanner";
+import CategoryCard from "../components/ecommerce/CategoryCard";
 import EssentialCard from "../components/ecommerce/EssentialCard";
 import Footer from "../components/ecommerce/Footer";
-import TopBar from "../components/layout/TopBar";
+import HeroBanner from "../components/ecommerce/HeroBanner";
+import ProductCard from "../components/ecommerce/ProductCard";
 import Header from "../components/layout/Header";
 import NavBar from "../components/layout/NavBar";
-import HeroBanner from "../components/ecommerce/HeroBanner";
-import herowatch from "../assets/icons/watchehero.svg";
-import Pagination from "../components/common/Pagination";
+import TopBar from "../components/layout/TopBar";
+import "./HomePage.css";
 
 function HomePage() {
     return (
