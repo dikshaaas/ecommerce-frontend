@@ -26,6 +26,7 @@ const products = [
     image: samsungm33,
     price: "₹16999",
     oldPrice: "₹24999",
+    discount: "56% OFF",
     saveText: "Save ₹8000",
   },
   {
@@ -34,6 +35,7 @@ const products = [
     image: samsungm53,
     price: "₹31999",
     oldPrice: "₹40999",
+    discount: "56% OFF",
     saveText: "Save ₹9000",
   },
   {
