@@ -3,7 +3,7 @@ export type ProductCardProps = {
     image: string;
     price: string;
     oldPrice?: string;
-    discount: string;
+    discount?: string;
     saveText: string;
     active?: boolean;
 };
