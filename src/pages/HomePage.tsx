@@ -1,7 +1,5 @@
-import herowatch from "../assets/icons/watchehero.svg";
 import Pagination from "../components/common/Pagination";
 import Footer from "../components/ecommerce/Footer";
-import HeroBanner from "../components/ecommerce/HeroBanner";
 import Header from "../components/layout/Header";
 import NavBar from "../components/layout/NavBar";
 import TopBar from "../components/layout/TopBar";
@@ -10,6 +8,7 @@ import Products from "./Product/Products";
 import Categories from "./Category/Categories";
 import Banners from "./Banner/Banners";
 import Essentials from "./Essential/Essentials";
+import Herobanner from "./Hero/Herobanner";
 
 function HomePage() {
   return (
@@ -26,13 +25,8 @@ function HomePage() {
         <NavBar />
       </section>
 
-      <section className="hero-section">
-        <HeroBanner
-          title="SMART WEARABLE."
-          subtitle="Best Deal Online on smart watches"
-          offer="UP to 80% OFF"
-          image={herowatch}
-        />
+      <section>
+        <Herobanner />
       </section>
 
       <section>

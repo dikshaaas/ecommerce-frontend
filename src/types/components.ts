@@ -42,4 +42,13 @@ export type HeroBannerProps = {
     subtitle: string;
     image: string;
     offer: string;
-}
+    background: string;
+    color: string;
+    circleborder: string;
+    circlebackground: string;
+    activeIndex: number;
+    totalBanners: number;
+    onSelect: (index: number) => void;
+    onNext: () => void;
+    onPrevious: () => void;
+};
