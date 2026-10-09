@@ -26,7 +26,7 @@ const banners = [
         brandLabelColor:"#F6DE8D",
     },
     {
-        id:1,
+        id:3,
         name:"XIAOMI",
         image:phonexiao,
         logo:xiaomi,       
