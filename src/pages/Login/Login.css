@@ -1,0 +1,137 @@
+.login-page {
+    width: min(1201px, calc(100% - 32px));
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 165px 16px;
+    background-color: #ffffff;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border: 1px solid #ededed;
+    border-radius: 22px;
+    background-color: #ffffff;
+}
+
+.login-container h1 {
+    margin: 0 0 8px;
+    color: #222222;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.login-subtitle {
+    margin: 0 0 28px;
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-field label {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-field input {
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.login-field input::placeholder {
+    color: #999999;
+}
+
+.login-field input:focus {
+    outline: 2px solid #008ecc;
+    outline-offset: 1px;
+}
+
+.login-button {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 4px;
+    border: 1px solid #008ecc;
+    border-radius: 10px;
+    background-color: #008ecc;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #007bb5;
+    border-color: #007bb5;
+}
+
+.login-button:focus-visible {
+    outline: 2px solid #008ecc;
+    outline-offset: 3px;
+}
+
+.login-message {
+    margin: 0;
+    color: #008ecc;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.not-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.not-login a {
+    color: #222222;
+    text-decoration: none;
+    margin: 7 16 6px;
+}
+
+.not-login a strong {
+    color: #008ecc
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        min-height: calc(100vh - 70px);
+        padding: 32px 16px;
+    }
+
+    .login-container {
+        padding: 24px 20px;
+    }
+
+    .login-container h1 {
+        font-size: 23px;
+    }
+}
