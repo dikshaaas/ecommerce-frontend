@@ -1,27 +1,26 @@
-import { useState } from "react";
-import type { FormEvent } from "react";
-import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import "./Login.css";
 import "../../index.css";
 
-function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+type LoginFormData = {
+  email: string;
+  password: string;
+};
 
+function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<LoginFormData>();
 
-    if (!email.trim() || !password) {
-      setMessage("Please enter your email and password.");
-      return;
-    }
-
-    login(email.trim());
+  const handleLogin = (data: LoginFormData) => {
+    login(data.email.trim());
     navigate("/");
   };
 
@@ -31,18 +30,26 @@ function Login() {
         <h1>Welcome to MegaMart</h1>
         <p className="login-subtitle">Sign in to your account</p>
 
-        <form className="login-form" onSubmit={handleLogin}>
+        <form className="login-form" onSubmit={handleSubmit(handleLogin)}>
           <div className="login-field">
             <label htmlFor="email">Email address</label>
             <input
               id="email"
               type="email"
               placeholder="Enter your email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
               autoComplete="email"
-              required
+              {...register("email", {
+                required: "Please enter your email.",
+                validate: (value) =>
+                  value.trim().length > 0 || "Please enter your email.",
+              })}
             />
+
+            {errors.email && (
+              <p className="login-message" role="alert">
+                {errors.email.message}
+              </p>
+            )}
           </div>
 
           <div className="login-field">
@@ -51,11 +58,17 @@ function Login() {
               id="password"
               type="password"
               placeholder="Enter your password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
               autoComplete="current-password"
-              required
+              {...register("password", {
+                required: "Please enter your password.",
+              })}
             />
+
+            {errors.password && (
+              <p className="login-message" role="alert">
+                {errors.password.message}
+              </p>
+            )}
           </div>
 
           <button className="login-button" type="submit">
@@ -63,16 +76,10 @@ function Login() {
           </button>
 
           <div className="not-login">
-            <a href="/signup">
+            <Link to="/signup">
               Don't have an account? <strong>Sign Up</strong>
-            </a>
+            </Link>
           </div>
-
-          {message && (
-            <p className="login-message" role="status">
-              {message}
-            </p>
-          )}
         </form>
       </div>
     </main>
