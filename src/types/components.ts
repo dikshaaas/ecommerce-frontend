@@ -35,6 +35,7 @@ export type EssentialProps = {
 export type CategoryNavProps = {
     name: string;
     active?: boolean;
+    path: string;
 };
 
 export type HeroBannerProps = {
