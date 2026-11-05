@@ -54,3 +54,11 @@ export type HeroBannerProps = {
     onPrevious: () => void;
 };
 
+export interface BreadcrumbItem {
+  label: string;
+  path?: string;
+}
+
+export interface BreadcrumbProps {
+  items: BreadcrumbItem[];
+}
