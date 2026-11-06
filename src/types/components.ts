@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export type ProductCardProps = {
     name: string;
     image: string;
@@ -36,6 +38,7 @@ export type CategoryNavProps = {
     name: string;
     active?: boolean;
     path: string;
+    dropdown?: ReactNode;
 };
 
 export type HeroBannerProps = {
