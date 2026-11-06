@@ -1,0 +1,17 @@
+.category-nav-item {
+    position: relative;
+}
+
+.category-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 12px;
+    z-index: 1000;
+}
+
+.category-nav-item:hover .category-dropdown,
+.category-nav-item:focus-within .category-dropdown {
+    display: block;
+}
