@@ -1,0 +1,45 @@
+.product-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+}
+
+.pagination-info {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.pagination-page {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #555;
+    border: 1.5px solid #e5e5e5;
+    transition: all 0.15s ease;
+}
+
+.pagination-page.active {
+    background: #008ecc;
+    color: #fff;
+    border-color: #008ecc;
+}
+
+.pagination-page:hover:not(.active) {
+    border-color: #008ecc;
+    color: #008ecc;
+}

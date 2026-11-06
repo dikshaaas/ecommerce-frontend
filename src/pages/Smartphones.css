@@ -1,0 +1,122 @@
+/* ================================
+   Smartphones Page Layout
+   ================================ */
+
+.smartphones-page-wrapper {
+    padding: 0 120px;
+}
+
+/* Override breadcrumb margins for this page */
+.smartphones-page-wrapper .breadcrumb {
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Title Section */
+.smartphones-title-section {
+    padding: 10px 0 24px;
+    border-bottom: 1.5px solid #e5e5e5;
+    margin-bottom: 32px;
+}
+
+.smartphones-title-section h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #252525;
+    margin-bottom: 6px;
+}
+
+.smartphones-title-section p {
+    font-size: 13px;
+    color: #777777;
+}
+
+/* Two-Column Layout: Sidebar + Main */
+.smartphones-layout {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 32px;
+}
+
+/* Main Content Area */
+.smartphones-main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Product Grid —  4 columns to match design (row of 4 products) */
+.smartphones-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Help card spans 3 columns (takes the remaining space in last row) */
+.smartphones-product-grid .help-card {
+    grid-column: span 3;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .smartphones-page-wrapper {
+        padding: 0 60px;
+    }
+
+    .smartphones-product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .smartphones-product-grid .help-card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+    .smartphones-page-wrapper {
+        padding: 0 32px;
+    }
+
+    .smartphones-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .smartphones-product-grid .help-card {
+        grid-column: span 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .smartphones-page-wrapper {
+        padding: 0 16px;
+    }
+
+    .smartphones-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .smartphones-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .smartphones-product-grid .help-card {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .smartphones-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .smartphones-product-grid .help-card {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,40 @@
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1.5px solid #008ecc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #008ecc;
+    background: #F3F9FB;
+    white-space: nowrap;
+}
+
+.filter-tag-remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: none;
+    color: #008ecc;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.15s ease;
+}
+
+.filter-tag-remove:hover {
+    color: #006699;
+}

@@ -19,7 +19,7 @@ function Breadcrumb({ items }: BreadcrumbProps) {
               </span>
             )}
 
-            {!isLast && <span className="breadcrumb-separator">/</span>}
+            {!isLast && <span className="breadcrumb-separator">›</span>}
           </span>
         );
       })}
