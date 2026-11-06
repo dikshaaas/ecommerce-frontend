@@ -2,6 +2,8 @@
   width: 100%;
   border-bottom: 1px solid #EDEDED;
   background-color: #ffffff;
+  position: relative;
+  z-index: 100;
 }
 
 .navbar-inner {
@@ -11,30 +13,13 @@
 
   display: flex;
   align-items: center;
-
   gap: 14px;
-  overflow-x: auto;
+
+  overflow: visible;
   white-space: nowrap;
   padding: 12px 0;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE/Edge */
-}
-
-.navbar-inner::-webkit-scrollbar {
-  display: none;
 }
 
 .navbar-inner>* {
   flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .navbar-inner {
-    min-height: 56px;
-    padding: 8px 0;
-    gap: 8px;
-  }
 }

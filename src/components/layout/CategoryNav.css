@@ -43,3 +43,29 @@
 .nav-pill-active .nav-pill-arrow {
   filter: brightness(0) invert(1);
 }
+
+.category-nav-item {
+  position: static;
+}
+
+.category-dropdown {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.category-nav-item:hover .category-dropdown,
+.category-nav-item:focus-within .category-dropdown {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}

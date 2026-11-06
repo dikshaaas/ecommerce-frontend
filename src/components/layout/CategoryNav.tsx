@@ -7,18 +7,18 @@ function CategoryNav({
   name,
   active = false,
   path,
+  dropdown,
 }: CategoryNavProps) {
   return (
-    <Link
-      to={path}
-    className={`nav-pill ${active ? "nav-pill-active" : ""}`}>
-      <span>{name}</span>
+    <div className="category-nav-item">
+      <Link to={path} className={`nav-pill ${active ? "nav-pill-active" : ""}`}>
+        <span>{name}</span>
 
-      <img
-        src={downarrow}
-        className="nav-pill-arrow"
-      />
-    </Link>
+        <img src={downarrow} className="nav-pill-arrow" alt="" />
+      </Link>
+
+      {dropdown && <div className="category-dropdown">{dropdown}</div>}
+    </div>
   );
 }
 

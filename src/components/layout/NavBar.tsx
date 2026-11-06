@@ -1,5 +1,6 @@
 import CategoryNav from "./CategoryNav";
 import "./NavBar.css";
+import ElectronicsMenu from "../electronics/ElectronicsMenu";
 
 const nav = [
   {
@@ -48,7 +49,7 @@ const nav = [
     id: 8,
     name: "Sports, Toys & Luggage",
     active: false,
-    path:"/sports",
+    path: "/sports",
   },
 ];
 
@@ -56,16 +57,17 @@ function NavBar() {
   return (
     <section className="navbar">
       <div className="navbar-inner">
-        {nav?.map ((eachNav => {
-          return(
-            <CategoryNav
-              key={eachNav.id}
-              name={eachNav.name}
-              active={eachNav.active}
-              path={eachNav.path}
-            />
-          )
-        }))}
+        {nav.map((eachNav) => (
+          <CategoryNav
+            key={eachNav.id}
+            name={eachNav.name}
+            active={eachNav.active}
+            path={eachNav.path}
+            dropdown={
+              eachNav.name === "Electronics" ? <ElectronicsMenu /> : undefined
+            }
+          />
+        ))}
       </div>
     </section>
   );
