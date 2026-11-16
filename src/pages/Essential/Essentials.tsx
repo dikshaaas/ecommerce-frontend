@@ -50,7 +50,7 @@ const Essentials = () => {
         highlightedText="Essentials" 
       />
       <div className="essential-grid">
-        {essentials?.map ((eachEssential, index)=> {
+        {essentials?.map((eachEssential) => {
             return (
               <EssentialCard
                 key={eachEssential.id}

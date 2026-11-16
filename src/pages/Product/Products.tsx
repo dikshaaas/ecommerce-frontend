@@ -58,7 +58,7 @@ const Products = () => {
       />
 
       <div className="product-grid">
-        {products?.map((eachProduct, index) => {
+        {products?.map((eachProduct) => {
           return (
             <div key={eachProduct.id}>
               <ProductCard

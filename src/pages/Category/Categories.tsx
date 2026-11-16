@@ -48,7 +48,7 @@ const Categories = () => {
           highlightedText="Top Categories" 
         />
         <div className="category-grid">
-          {categories?.map((eachCategory, index) => {
+          {categories?.map((eachCategory) => {
             return(
                 <CategoryCard
                   key={eachCategory.id}

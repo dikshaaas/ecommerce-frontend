@@ -3,7 +3,7 @@ import searchIcon from "../../assets/icons/Search.svg";
 import listIcon from "../../assets/icons/list.svg";
 import "./SearchBar.css";
 
-function SearchBar() {
+function SearchBar({ onMenuClick }: { onMenuClick: () => void }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearch = (e: { target: { value: SetStateAction<string>; }; }) => {
@@ -24,9 +24,9 @@ function SearchBar() {
         />
       </div>
 
-      <div className="list-icon">
-        <img src={listIcon} alt="List" />
-      </div>
+      <button type="button" className="list-icon" aria-label="Open menu" onClick={onMenuClick}>
+        <img src={listIcon} alt="" />
+      </button>
     </div>
   );
 }

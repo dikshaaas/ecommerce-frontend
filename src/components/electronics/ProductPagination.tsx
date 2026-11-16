@@ -9,7 +9,7 @@ type ProductPaginationProps = {
 function ProductPagination({
     totalProducts = 5,
     currentPage = 1,
-    totalPages = 1,
+    totalPages: _totalPages = 1,
 }: ProductPaginationProps) {
     return (
         <div className="product-pagination">

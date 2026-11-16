@@ -5,7 +5,33 @@ import appStoreIcon from "../../assets/icons/app-store.svg";
 import googlePlayIcon from "../../assets/icons/google-play.svg";
 import blueCircleIcon from "../../assets/icons/bluecircle.svg";
 
-function Footer() {
+function Footer({ variant = "default" }: { variant?: "default" | "compact" }) {
+    if (variant === "compact") {
+        return (
+            <footer className="footer-container footer-container--compact">
+                <div className="footer-content">
+                    <div className="footer-col footer-col-1">
+                        <h2 className="footer-logo">MegaMart</h2>
+                        <p className="footer-tagline">Your everyday shopping destination.</p>
+                    </div>
+                    <div className="footer-col footer-col-2">
+                        <h3 className="footer-col-title">Contact Us</h3>
+                        <p className="footer-compact-line">Whats App&nbsp; +1 202-918-2132</p>
+                        <p className="footer-compact-line">Call Us&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +1 202-918-2132</p>
+                    </div>
+                    <div className="footer-col footer-col-3">
+                        <h3 className="footer-col-title">Customer Services</h3>
+                        <div className="footer-compact-links">
+                            <span>About Us</span><span>Terms &amp; Conditions</span>
+                            <span>FAQ</span><span>Privacy Policy</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer-bottom"><p>© 2022 All rights reserved. Reliance Retail Ltd.</p></div>
+            </footer>
+        );
+    }
+
     return (
         <footer className="footer-container">
             <div className="footer-content">

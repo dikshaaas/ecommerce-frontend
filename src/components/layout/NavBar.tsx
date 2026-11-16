@@ -6,7 +6,7 @@ const nav = [
   {
     id: 1,
     name: "Groceries",
-    active: false,
+    active: true,
     path: "/groceries",
   },
   {

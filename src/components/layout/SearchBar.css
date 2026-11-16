@@ -65,6 +65,10 @@
   margin-right: 16px;
 
   flex-shrink: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .list-icon img {

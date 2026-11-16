@@ -47,7 +47,7 @@ const Banners = () => {
             highlightedText="Electronic Brands" 
         />
         <div className="brand-grid">
-            {banners?.map ((eachBanner, index) => {
+            {banners?.map((eachBanner) => {
                 return(
                     <BrandBanner
                         key={eachBanner.id}
