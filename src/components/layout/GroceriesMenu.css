@@ -1,0 +1,134 @@
+.category-nav-item-groceries {
+  position: static;
+}
+
+.category-nav-item-groceries .category-dropdown {
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.groceries-menu {
+  width: min(488px, calc(100vw - 32px));
+  box-sizing: border-box;
+  margin: 0 0 0 max(16px, calc((100vw - 1200px) / 2));
+  padding: 20px 16px 24px;
+  color: #222;
+  white-space: normal;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .16);
+}
+
+.groceries-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.groceries-menu-header h2 {
+  margin: 0;
+  color: #328fca;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.groceries-menu a {
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.groceries-menu a:hover { color: #008ecc; }
+
+.groceries-menu-header a {
+  color: #008ecc;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.groceries-menu-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 158px;
+  gap: 16px;
+  padding-top: 14px;
+}
+
+.groceries-menu-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.groceries-menu-group h3,
+.groceries-feature h3 {
+  margin: 0 0 1px;
+  color: #222;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.groceries-delivery {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: auto 0 0;
+  padding-top: 3px;
+  color: #777;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.groceries-delivery svg { color: #168dcc; }
+
+.groceries-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: start;
+  padding: 10px;
+  border-radius: 9px;
+  background: #f3f9fb;
+}
+
+.groceries-feature img {
+  width: 100%;
+  height: 66px;
+  margin-bottom: 7px;
+  object-fit: contain;
+}
+
+.groceries-feature p {
+  margin: 7px 0 8px;
+  color: #328fca;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.groceries-menu .groceries-shop-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 11px;
+  border-radius: 5px;
+  background: #328fca;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (max-width: 540px) {
+  .groceries-menu { width: calc(100vw - 32px); margin-left: 16px; padding: 20px; }
+  .groceries-menu-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .groceries-feature {
+    grid-column: 1 / -1;
+    width: min(180px, 100%);
+    box-sizing: border-box;
+  }
+}
