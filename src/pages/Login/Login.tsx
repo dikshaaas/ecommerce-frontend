@@ -62,13 +62,9 @@ function Login() {
             <input type="checkbox" {...register("remember")} />
             <span>Remember me</span>
           </label>
-          <button
-            className="auth-inline-link"
-            type="button"
-            onClick={() => setForgotMessage("Password reset is not available yet. Please contact MegaMart support for help.")}
-          >
-            Forgot password?
-          </button>
+              <Link to="/forgot-password" className="auth-inline-link">
+                  Forgot password?
+              </Link>
         </div>
         {forgotMessage && <span className="auth-message" role="status">{forgotMessage}</span>}
         <button className="auth-submit" type="submit" disabled={isSubmitting}>
