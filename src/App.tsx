@@ -6,6 +6,7 @@ import { AuthProvider } from "./context/AuthContext";
 import Smartphones from "./pages/Smartphones";
 import ForgotPassword from "./pages/Login/ForgotPassword";
 import VerifyEmail from "./pages/Login/VerifyEmail";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/electronics" element={<Smartphones />} />
+          <Route path="/product-details" element={<ProductDetails />} />
            <Route path="/forgot-password" element={<ForgotPassword/>}></Route>
            <Route path="/verify-email" element={<VerifyEmail/>}></Route>
         </Routes>

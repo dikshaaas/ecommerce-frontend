@@ -10,7 +10,7 @@ function CategoryNav({
   dropdown,
 }: CategoryNavProps) {
   return (
-    <div className="category-nav-item">
+    <div className={`category-nav-item${name === "Groceries" ? " category-nav-item-groceries" : ""}`}>
       <Link to={path} className={`nav-pill ${active ? "nav-pill-active" : ""}`}>
         <span>{name}</span>
 

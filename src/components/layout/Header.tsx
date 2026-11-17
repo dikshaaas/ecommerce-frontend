@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Apple, Box, ChevronRight, Flower2, Headphones, Heart, Home, Monitor, Shirt, ShoppingBasket, Sofa, Watch, X } from "lucide-react";
+import { Apple, Box, ChevronDown, ChevronRight, Flower2, Headphones, Heart, Home, Monitor, Shirt, ShoppingBasket, Sofa, Watch, X } from "lucide-react";
 import logo from "../../assets/icons/logo.svg";
 import "./Header.css";
 import userIcon from "../../assets/icons/user.svg";
@@ -9,8 +9,15 @@ import SearchBar from "./SearchBar";
 import { useAuth } from "../../context/AuthContext";
 
 function Header() {
-  const {  isLoggedIn, logout } = useAuth();
+  const { email, isLoggedIn, logout } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const username = email
+    ?.split("@")[0]
+    .split(/[._+-]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
   const closeMenu = () => setMenuOpen(false);
   const categories = [
@@ -50,10 +57,9 @@ function Header() {
             </Link>
           ) : (
             <div className="header-user">
-
-              <button type="button" className="header-logout" onClick={logout}>
-                Logout
-              </button>
+              <img src={userIcon} alt="" className="header-action-icon" />
+              <span className="header-welcome">Hi, {username || "there"}</span>
+              <ChevronDown size={16} aria-hidden="true" />
             </div>
           )}
 
@@ -69,7 +75,7 @@ function Header() {
         <div className="drawer-backdrop" onMouseDown={closeMenu}>
           <aside className="menu-drawer" aria-label="Main menu" onMouseDown={(event) => event.stopPropagation()}>
             <div className="drawer-welcome">
-              <div className="drawer-welcome-heading"><img src={userIcon} alt="" /><strong>{isLoggedIn ? "Hello, welcome!" : "Hello, welcome!"}</strong><button type="button" aria-label="Close menu" onClick={closeMenu}><X size={20} /></button></div>
+              <div className="drawer-welcome-heading"><img src={userIcon} alt="" /><strong>{isLoggedIn ? `Hi, ${username || "there"}!` : "Hello, welcome!"}</strong><button type="button" aria-label="Close menu" onClick={closeMenu}><X size={20} /></button></div>
               <p>Sign in for a more personal shopping experience.</p>
               {isLoggedIn ? <button className="drawer-auth-button" type="button" onClick={() => { logout(); closeMenu(); }}>Log out</button> : <Link to="/login" className="drawer-auth-button" onClick={closeMenu}>Sign Up / Sign In</Link>}
             </div>

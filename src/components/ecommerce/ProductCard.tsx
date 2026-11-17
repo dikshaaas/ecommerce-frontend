@@ -1,4 +1,5 @@
 import type { ProductCardProps } from "../../types/components";
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({
@@ -13,7 +14,7 @@ function ProductCard({
   const hasDiscount = Boolean(discount);
   const hasSave = Boolean(saveText);
   return (
-    <article className={`product-card ${active ? "product-card-active" : ""}`}>
+    <Link to="/product-details" className={`product-card ${active ? "product-card-active" : ""}`}>
       <div className="product-image-wrapper">
         <img src={image} alt={image} className="product-image" />
 
@@ -30,7 +31,7 @@ function ProductCard({
 
         {hasSave &&<p className="save-text">{saveText}</p>}
       </div>
-    </article>
+    </Link>
   );
 }
 

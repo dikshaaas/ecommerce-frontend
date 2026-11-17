@@ -1,6 +1,7 @@
 import CategoryNav from "./CategoryNav";
 import "./NavBar.css";
 import ElectronicsMenu from "../electronics/ElectronicsMenu";
+import GroceriesMenu from "./GroceriesMenu";
 
 const nav = [
   {
@@ -64,7 +65,8 @@ function NavBar() {
             active={eachNav.active}
             path={eachNav.path}
             dropdown={
-              eachNav.name === "Electronics" ? <ElectronicsMenu /> : undefined
+              eachNav.name === "Electronics" ? <ElectronicsMenu /> :
+              eachNav.name === "Groceries" ? <GroceriesMenu /> : undefined
             }
           />
         ))}

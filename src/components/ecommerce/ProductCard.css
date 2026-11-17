@@ -10,6 +10,8 @@
   margin: 0 auto;
   transition: all 0.25s ease;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
 .product-card-active,
