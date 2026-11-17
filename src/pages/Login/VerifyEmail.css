@@ -1,0 +1,182 @@
+.verify-email-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 26px 24px;
+    background: #ffffff;
+    border: 1px solid #ededed;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.verify-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #edf7fd;
+    color: #328fce;
+}
+
+.verify-email-card .auth-heading {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 24px;
+}
+
+.verify-email-card .auth-subheading {
+    margin-bottom: 20px;
+    text-align: left;
+    color: #777777;
+    line-height: 1.6;
+}
+
+.verify-email-address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+    background: #f8fbfd;
+    color: #444444;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.verify-email-address svg {
+    flex-shrink: 0;
+    color: #328fce;
+}
+
+.verify-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.verify-label {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.verify-code-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 9px;
+}
+
+.verify-code-inputs input {
+    width: 48px;
+    height: 50px;
+    padding: 0;
+    border: 1px solid #b9d9ef;
+    border-radius: 8px;
+    background: #f8fbfd;
+    color: #328fce;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.verify-code-inputs input:focus {
+    border-color: #328fce;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(50, 143, 206, 0.12);
+}
+
+.verify-form .auth-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.verify-message {
+    margin: 0;
+    color: #d64545;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.verify-resend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 13px;
+    color: #777777;
+}
+
+.verify-resend button {
+    border: none;
+    padding: 0;
+    background: none;
+    color: #328fce;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.verify-resend button:hover {
+    text-decoration: underline;
+}
+
+.verify-security {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #eeeeee;
+    color: #777777;
+}
+
+.verify-security svg {
+    flex-shrink: 0;
+    color: #328fce;
+}
+
+.verify-security p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.verify-back {
+    margin: 0;
+}
+
+.verify-back a {
+    color: #328fce;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.verify-back a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .verify-email-card {
+        padding: 22px 18px;
+    }
+
+    .verify-code-inputs {
+        gap: 6px;
+    }
+
+    .verify-code-inputs input {
+        width: 100%;
+        max-width: 46px;
+        height: 46px;
+        font-size: 19px;
+    }
+}
