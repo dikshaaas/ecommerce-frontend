@@ -9,56 +9,8 @@ import SortBar from "../components/electronics/SortBar";
 import HelpCard from "../components/electronics/HelpCard";
 import ProductPagination from "../components/electronics/ProductPagination";
 import ProductCard from "../components/ecommerce/ProductCard";
-import { samsungs22, samsungm13, samsungm33, samsungm53 } from "../assets/images";
+import { products as smartphoneProducts } from "../data/products";
 import "./Smartphones.css";
-
-const smartphoneProducts = [
-  {
-    id: 1,
-    name: "Galaxy S22 Ultra",
-    image: samsungs22,
-    price: "₹32999",
-    oldPrice: "₹74999",
-    discount: "56% OFF",
-    saveText: "Save - ₹32999",
-  },
-  {
-    id: 2,
-    name: "Galaxy S22 Ultra",
-    image: samsungm13,
-    price: "₹32999",
-    oldPrice: "₹74999",
-    discount: "56% OFF",
-    saveText: "Save - ₹32999",
-  },
-  {
-    id: 3,
-    name: "Galaxy S22 Ultra",
-    image: samsungm33,
-    price: "₹32999",
-    oldPrice: "₹74999",
-    discount: "56% OFF",
-    saveText: "Save - ₹32999",
-  },
-  {
-    id: 4,
-    name: "Galaxy S22 Ultra",
-    image: samsungm53,
-    price: "₹32999",
-    oldPrice: "₹74999",
-    discount: "56% OFF",
-    saveText: "Save - ₹32999",
-  },
-  {
-    id: 5,
-    name: "Galaxy S22 Ultra",
-    image: samsungs22,
-    price: "₹32999",
-    oldPrice: "₹74999",
-    discount: "56% OFF",
-    saveText: "Save - ₹32999",
-  },
-];
 
 function Smartphones() {
   const breadcrumbItems = [
@@ -106,6 +58,7 @@ function Smartphones() {
             <div className="smartphones-product-grid">
               {smartphoneProducts.map((product) => (
                 <ProductCard
+                  productId={product.id}
                   key={product.id}
                   name={product.name}
                   image={product.image}
