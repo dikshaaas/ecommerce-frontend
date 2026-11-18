@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Minus, Plus, ShoppingCart, Truck } from "lucide-react";
+import { BadgePercent, Check, Minus, Plus, ShoppingCart, Truck } from "lucide-react";
 import Header from "../components/layout/Header";
 import NavBar from "../components/layout/NavBar";
 import TopBar from "../components/layout/TopBar";
@@ -27,7 +27,8 @@ const specifications = [
 
 function ProductDetails() {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState("1");
+  const quantityNumber = Math.max(1, Number.parseInt(quantity, 10) || 1);
   const [notice, setNotice] = useState("");
   const breadcrumbItems = [
     { label: "Home", path: "/" },
@@ -71,31 +72,33 @@ function ProductDetails() {
             <h1>Samsung Galaxy S22 Ultra 5G</h1>
             <p className="product-variant">Phantom Black · 128 GB · S Pen included</p>
             <div className="product-rating"><span>★★★★★</span><strong>4.5</strong><small>(128 ratings · 36 reviews)</small></div>
-            <div className="product-detail-price">
-              <strong>₹32,999</strong><del>₹74,999</del><span>56% OFF</span>
+            <div className="product-pricing">
+              <div className="product-detail-price">
+                <strong>₹32,999</strong><del>₹74,999</del><span>56% OFF</span>
+              </div>
+              <p className="product-saving">You save ₹42,000 on this deal!</p>
+              <p className="tax-note">Inclusive of all taxes</p>
             </div>
-            <p className="product-saving">You save ₹42,000 on this deal!</p>
-            <p className="tax-note">Inclusive of all taxes</p>
 
             <div className="available-offers">
               <h2>Available offers</h2>
-              <p><Check size={14} /> Bank offer: 10% off on HDFC Bank Credit Cards</p>
-              <p><Check size={14} /> Exchange offer: Up to ₹8,000 off on exchange</p>
-              <p><Check size={14} /> No-cost EMI: Starting ₹5,500/month on select cards</p>
+              <p><BadgePercent size={16} aria-hidden="true" /> <span><strong>Bank offer:</strong> 10% off on HDFC Bank Credit Cards</span></p>
+              <p><BadgePercent size={16} aria-hidden="true" /> <span><strong>Exchange offer:</strong> Up to ₹8,000 off on exchange</span></p>
+              <p><BadgePercent size={16} aria-hidden="true" /> <span><strong>No-cost EMI:</strong> Starting ₹5,500/month on select cards</span></p>
             </div>
 
             <p className="delivery-note"><Truck size={15} /><strong>FREE delivery</strong> by 14 Dec 2026 to 423651</p>
             <div className="product-purchase-row">
               <div className="quantity-picker" aria-label="Quantity">
-                <button type="button" onClick={() => setQuantity((value) => Math.max(1, value - 1))} aria-label="Decrease quantity"><Minus size={14} /></button>
-                <span>{quantity}</span>
-                <button type="button" onClick={() => setQuantity((value) => value + 1)} aria-label="Increase quantity"><Plus size={14} /></button>
+                <button type="button" disabled={quantityNumber <= 1} onClick={() => setQuantity(String(Math.max(1, quantityNumber - 1)))} aria-label="Decrease quantity"><Minus size={14} /></button>
+                <input type="number" min="1" step="1" inputMode="numeric" value={quantity} onChange={(event) => setQuantity(event.target.value.replace(/\D/g, ""))} onBlur={() => setQuantity(String(quantityNumber))} aria-label="Quantity" />
+                <button type="button" onClick={() => setQuantity(String(quantityNumber + 1))} aria-label="Increase quantity"><Plus size={14} /></button>
               </div>
-              <button type="button" className="add-to-cart" onClick={() => setNotice(`${quantity} item${quantity === 1 ? "" : "s"} added to your cart`)}><ShoppingCart size={16} /> Add to Cart</button>
+              <button type="button" className="add-to-cart" onClick={() => setNotice(`${quantityNumber} item${quantityNumber === 1 ? "" : "s"} added to your cart`)}><ShoppingCart size={16} /> Add to Cart</button>
               <button type="button" className="buy-now" onClick={() => setNotice("Ready for checkout")}>Buy Now</button>
             </div>
             {notice && <p className="purchase-notice" role="status">{notice}</p>}
-            <p className="stock-note"><Check size={14} /> Sold by <strong>MegaMart Retail</strong> · In Stock</p>
+            <p className="stock-note"><Check size={15} aria-hidden="true" /> <span>Sold by <strong>MegaMart Retail</strong> · In Stock</span></p>
           </div>
         </section>
 
