@@ -73,7 +73,7 @@ function FilterSidebar({
                 <button className="clear-all-btn">Clear all</button>
             </div>
 
-            {/* Price Range Section */}
+            
             <div className="filter-section">
                 <div className="filter-section-header">
                     <h3>Price range</h3>
@@ -92,7 +92,7 @@ function FilterSidebar({
                 </div>
             </div>
 
-            {/* Dynamic Filter Sections */}
+            
             {filterSections.map((section) => (
                 <div className="filter-section" key={section.title}>
                     <div
