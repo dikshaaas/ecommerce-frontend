@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 export type ProductCardProps = {
+    productId?: string;
     name: string;
     image: string;
     price: string;
