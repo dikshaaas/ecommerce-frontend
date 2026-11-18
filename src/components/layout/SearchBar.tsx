@@ -1,17 +1,26 @@
-import { useState, type SetStateAction } from "react";
+import { useEffect, useState, type FormEvent } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import searchIcon from "../../assets/icons/Search.svg";
 import listIcon from "../../assets/icons/list.svg";
 import "./SearchBar.css";
 
 function SearchBar({ onMenuClick }: { onMenuClick: () => void }) {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleSearch = (e: { target: { value: SetStateAction<string>; }; }) => {
-    setSearchQuery(e.target.value);
+  useEffect(() => {
+    setSearchQuery(new URLSearchParams(location.search).get("q") ?? "");
+  }, [location.search]);
+
+  const handleSearch = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const query = searchQuery.trim();
+    if (query) navigate(`/search?q=${encodeURIComponent(query)}`);
   };
 
   return (
-    <div className="search-bar">
+    <form className="search-bar" onSubmit={handleSearch} role="search">
       <div className="search-box">
         <img src={searchIcon} alt="Search" className="search-icon" />
 
@@ -19,7 +28,7 @@ function SearchBar({ onMenuClick }: { onMenuClick: () => void }) {
           type="text"
           placeholder="Search essentials, groceries, and more..."
           value={searchQuery}
-          onChange={handleSearch}
+          onChange={(event) => setSearchQuery(event.target.value)}
           className="search-input"
         />
       </div>
@@ -27,7 +36,7 @@ function SearchBar({ onMenuClick }: { onMenuClick: () => void }) {
       <button type="button" className="list-icon" aria-label="Open menu" onClick={onMenuClick}>
         <img src={listIcon} alt="" />
       </button>
-    </div>
+    </form>
   );
 }
 
