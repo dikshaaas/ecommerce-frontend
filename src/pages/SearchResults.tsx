@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ChevronDown, ChevronRight, Search, Smartphone } from "lucide-react";
+import { ChevronDown, ChevronRight, Search, ShoppingBag, Smartphone } from "lucide-react";
 import Header from "../components/layout/Header";
 import NavBar from "../components/layout/NavBar";
 import TopBar from "../components/layout/TopBar";
@@ -19,6 +19,7 @@ function SearchResults() {
     const found = products.filter((product) => `${product.name} ${product.detailName} ${product.brand}`.toLowerCase().includes(needle));
     return sort === "Price: Low to high" ? [...found].sort((a, b) => Number(a.price.replace(/[^0-9]/g, "")) - Number(b.price.replace(/[^0-9]/g, ""))) : found;
   }, [query, sort]);
+  const hasSamsungResults = matches.some((product) => product.brand.toLowerCase() === "samsung");
   const productsToShow = filter === "Smartphones" || filter === "In stock" ? matches : matches;
 
   return (
@@ -34,8 +35,8 @@ function SearchResults() {
         </section>
         <div className="search-toolbar">
           <div className="search-filters" role="group" aria-label="Filter search results">
-            {[`All results (${matches.length})`, `Smartphones (${matches.length})`, "In stock"].map((item, index) => {
-              const label = index === 0 ? "All results" : index === 1 ? "Smartphones" : "In stock";
+            {[`All results (${matches.length})`, `${hasSamsungResults ? "Smartphones" : "Matching products"} (${matches.length})`, "In stock"].map((item, index) => {
+              const label = index === 0 ? "All results" : index === 1 ? hasSamsungResults ? "Smartphones" : "Matching products" : "In stock";
               return <button key={label} type="button" className={filter === label ? "selected" : ""} onClick={() => setFilter(label)}>{item}</button>;
             })}
           </div>
@@ -55,11 +56,16 @@ function SearchResults() {
             discount={product.discount}
             saveText={product.saveText}
           /></div>)}
-        </div> : <div className="search-empty"><Search size={24} /><h2>No products found for “{query}”</h2><p>Try another product name or browse all categories.</p><Link to="/electronics">Browse electronics</Link></div>}
+        </div> : <div className="search-empty"><Search size={24} /><h2>No products found for “{query}”</h2><p>Try another search, or browse the store for more to explore.</p><Link to="/">Browse MegaMart</Link></div>}
         <div className="search-pagination"><span>Showing 1–{productsToShow.length} of {matches.length} results</span><button type="button" aria-current="page">1</button></div>
         <section className="search-discovery">
-          <div className="search-shop-card"><Smartphone size={22} /><div><h2>Shop {query || "popular"} smartphones</h2><p>Galaxy S22 Ultra, Galaxy M13, M33 and M53.</p><Link to="/electronics">Explore smartphones</Link></div></div>
-          <div className="search-suggestions"><h2>Searches you might like</h2><div><Link to="/search?q=Galaxy%20S22%20Ultra">Galaxy S22 Ultra</Link><Link to="/search?q=Samsung%20Galaxy%20M13">Samsung Galaxy M13</Link></div><p>Try a model name or filter by storage and price.</p></div>
+          {hasSamsungResults ? <>
+            <div className="search-shop-card"><Smartphone size={22} /><div><h2>Shop Samsung smartphones</h2><p>Galaxy S22 Ultra, Galaxy M13, M33 and M53.</p><Link to="/electronics">Explore smartphones</Link></div></div>
+            <div className="search-suggestions"><h2>Searches you might like</h2><div><Link to="/search?q=Galaxy%20S22%20Ultra">Galaxy S22 Ultra</Link><Link to="/search?q=Samsung%20Galaxy%20M13">Samsung Galaxy M13</Link></div><p>Try a model name or filter by storage and price.</p></div>
+          </> : <>
+            <div className="search-shop-card"><ShoppingBag size={22} /><div><h2>Explore MegaMart</h2><p>Find groceries, fresh fruits, home essentials, electronics and more.</p><Link to="/">Browse the store</Link></div></div>
+            <div className="search-suggestions"><h2>Browse popular departments</h2><div><Link to="/">Groceries</Link><Link to="/">Premium fruits</Link><Link to="/electronics">Electronics</Link></div><p>Or try a different product name in the search box.</p></div>
+          </>}
         </section>
         <section className="search-help"><Search size={21} /><div><h2>Looking for something else?</h2><p>Search essentials, groceries and more, or browse all categories.</p></div><Link to="/">All categories <ChevronRight size={14} /></Link></section>
       </div>
