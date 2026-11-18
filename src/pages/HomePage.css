@@ -54,9 +54,6 @@
   margin-bottom: 80px;
 }
 
-/* Responsive Media Queries */
-
-/* Tablet (max-width: 1024px) */
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -87,7 +84,6 @@
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
 
   .smartphone-section,
@@ -107,7 +103,6 @@
   }
 }
 
-/* Small Mobile (max-width: 600px) */
 @media (max-width: 600px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
