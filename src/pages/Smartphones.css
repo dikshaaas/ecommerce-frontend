@@ -1,19 +1,13 @@
-/* ================================
-   Smartphones Page Layout
-   ================================ */
-
 .smartphones-page-wrapper {
     padding: 0 120px;
 }
 
-/* Override breadcrumb margins for this page */
 .smartphones-page-wrapper .breadcrumb {
     margin-left: 0;
     margin-top: 38px;
     margin-bottom: 10px;
 }
 
-/* Title Section */
 .smartphones-title-section {
     padding: 10px 0 24px;
     border-bottom: 1.5px solid #e5e5e5;
@@ -32,36 +26,27 @@
     color: #777777;
 }
 
-/* Two-Column Layout: Sidebar + Main */
 .smartphones-layout {
     display: flex;
     gap: 24px;
     padding-bottom: 32px;
 }
 
-/* Main Content Area */
 .smartphones-main {
     flex: 1;
     min-width: 0;
 }
 
-/* Product Grid —  4 columns to match design (row of 4 products) */
 .smartphones-product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
 }
 
-/* Help card spans 3 columns (takes the remaining space in last row) */
 .smartphones-product-grid .help-card {
     grid-column: span 3;
 }
 
-/* ================================
-   Responsive
-   ================================ */
-
-/* Tablet */
 @media (max-width: 1200px) {
     .smartphones-page-wrapper {
         padding: 0 60px;
@@ -90,7 +75,6 @@
     }
 }
 
-/* Mobile */
 @media (max-width: 700px) {
     .smartphones-page-wrapper {
         padding: 0 16px;

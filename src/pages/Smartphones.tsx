@@ -47,10 +47,10 @@ function Smartphones() {
         </div>
 
         <div className="smartphones-layout">
-          {/* Left Sidebar */}
+          
           <FilterSidebar />
 
-          {/* Right Content */}
+          
           <div className="smartphones-main">
             <SortBar totalProducts={smartphoneProducts.length} />
             <ActiveFilters filters={activeFilters} />
@@ -69,7 +69,7 @@ function Smartphones() {
                 />
               ))}
 
-              {/* Help Card in last position */}
+              
               <HelpCard />
             </div>
 
