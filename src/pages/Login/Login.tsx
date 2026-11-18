@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowRight, ShieldCheck } from "lucide-react";
@@ -12,7 +11,6 @@ type LoginFormData = { email: string; password: string; remember: boolean };
 function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [forgotMessage, setForgotMessage] = useState("");
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<LoginFormData>({
     defaultValues: { remember: true }
   });
@@ -66,7 +64,6 @@ function Login() {
                   Forgot password?
               </Link>
         </div>
-        {forgotMessage && <span className="auth-message" role="status">{forgotMessage}</span>}
         <button className="auth-submit" type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Signing in…" : <>Sign in <ArrowRight size={18} /></>}
         </button>

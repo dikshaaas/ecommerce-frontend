@@ -20,7 +20,6 @@ function ForgotPassword() {
   const handleForgotPassword = async (data: ForgotPasswordData) => {
     const email = data.email.trim();
 
-    // TODO: Call your backend API to send the verification code.
 
     navigate("/verify-email", {
       state: { email },

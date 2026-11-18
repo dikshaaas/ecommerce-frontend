@@ -21,7 +21,6 @@ function Signup() {
   const { register, handleSubmit, getValues, formState: { errors, isSubmitting } } = useForm<SignupFormData>({ defaultValues: { countryCode: "+91", promotions: false, terms: false } });
 
   const handleSignup = async (data: SignupFormData) => {
-    // Registration is not backed by an API yet; retain the existing post-submit route.
     console.log("Signup data:", { ...data, mobile: `${data.countryCode} ${data.mobile}` });
     navigate("/login");
   };

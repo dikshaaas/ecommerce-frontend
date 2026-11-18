@@ -1,13 +1,12 @@
 
 import { useRef, useState } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { ShieldCheck, ArrowRight, Mail } from "lucide-react";
 import AuthLayout from "../../components/auth/AuthLayout";
 import "./verifyEmail.css";
 
 function VerifyEmail() {
   const location = useLocation();
-  const navigate = useNavigate();
 
   const email = location.state?.email || "";
 
@@ -17,7 +16,6 @@ function VerifyEmail() {
 
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  // Handle individual code inputs
   const handleCodeChange = (value: string, index: number) => {
     const digit = value.replace(/\D/g, "").slice(-1);
 
@@ -32,7 +30,6 @@ function VerifyEmail() {
     }
   };
 
-  // Handle backspace
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLInputElement>,
     index: number
@@ -42,7 +39,6 @@ function VerifyEmail() {
     }
   };
 
-  // Handle pasting a six-digit code
   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
     e.preventDefault();
 
@@ -65,7 +61,6 @@ function VerifyEmail() {
     inputRefs.current[Math.min(pasted.length, 5)]?.focus();
   };
 
-  // Verify email code
   const handleVerify = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -84,11 +79,6 @@ function VerifyEmail() {
     setIsSubmitting(true);
 
     try {
-      // TODO: Connect your backend verification API here.
-      // Only navigate after the backend confirms the code is valid.
-
-      console.log("Verify code:", verificationCode, "Email:", email);
-
       setMessage("Connect your verification API to complete verification.");
     } finally {
       setIsSubmitting(false);
@@ -96,7 +86,6 @@ function VerifyEmail() {
   };
 
   const handleResendCode = () => {
-    // TODO: Call your backend resend verification code API.
     setMessage("Please connect your resend-code API to send a new code.");
   };
 
