@@ -94,7 +94,6 @@
   border-radius: 50%;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   .brand-card {
     min-height: 180px;
@@ -138,7 +137,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .brand-card {
     min-height: 160px;

@@ -198,10 +198,6 @@
     outline-offset: 4px;
 }
 
-/* =========================
-   TABLET
-   ========================= */
-
 @media (max-width: 1024px) {
     .hero-banner {
         min-height: 300px;
@@ -269,10 +265,6 @@
 }
 
 
-
-/* =========================
-   MOBILE
-   ========================= */
 
 @media (max-width: 768px) {
     .hero-banner {
@@ -345,10 +337,6 @@
     }
 }
 
-
-/* =========================
-   SMALL MOBILE
-   ========================= */
 
 @media (max-width: 480px) {
     .hero-banner {

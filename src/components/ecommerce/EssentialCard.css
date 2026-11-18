@@ -8,8 +8,6 @@
   cursor: pointer;
 }
 
-/* Image */
-
 .essential-image-wrapper {
   width: 100%;
   aspect-ratio: 1;
@@ -61,7 +59,6 @@
   text-align: center;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   .essential-name p {
     font-size: 13px;
@@ -76,7 +73,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .essential-image-wrapper {
     border-radius: 12px;

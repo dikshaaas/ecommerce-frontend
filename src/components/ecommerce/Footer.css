@@ -10,10 +10,6 @@
 }
 
 
-/* =========================
-   FOOTER CONTENT
-   ========================= */
-
 .footer-content {
     position: relative;
     z-index: 2;
@@ -29,10 +25,6 @@
     align-items: start;
 }
 
-
-/* =========================
-   COLUMNS
-   ========================= */
 
 .footer-col-1 {
     width: 100%;
@@ -50,10 +42,6 @@
 }
 
 
-/* =========================
-   LOGO
-   ========================= */
-
 .footer-logo {
     font-size: 36px;
     font-weight: 700;
@@ -64,10 +52,6 @@
 }
 
 
-/* =========================
-   SUB TITLES
-   ========================= */
-
 .footer-subtitle {
     font-size: 20px;
     font-weight: 600;
@@ -77,10 +61,6 @@
     color: #fff;
 }
 
-
-/* =========================
-   CONTACT
-   ========================= */
 
 .contact-item {
     display: flex;
@@ -122,10 +102,6 @@
 }
 
 
-/* =========================
-   DOWNLOAD APP
-   ========================= */
-
 .footer-download-app {
     margin-top: 30px;
 }
@@ -143,10 +119,6 @@
     height: auto;
 }
 
-
-/* =========================
-   COLUMN HEADINGS
-   ========================= */
 
 .footer-col-title {
     display: inline-block;
@@ -176,10 +148,6 @@
     border-radius: 2px;
 }
 
-
-/* =========================
-   LISTS
-   ========================= */
 
 .footer-list {
     list-style: none;
@@ -218,10 +186,6 @@
 }
 
 
-/* =========================
-   BOTTOM
-   ========================= */
-
 .footer-bottom {
     position: relative;
     z-index: 2;
@@ -244,10 +208,6 @@
 }
 
 
-/* =========================
-   BACKGROUND CIRCLES
-   ========================= */
-
 .footer-background-circles {
     position: absolute;
 
@@ -268,10 +228,6 @@
     width: auto;
 }
 
-
-/* =========================
-   LARGE TABLET
-   ========================= */
 
 @media (max-width: 1100px) {
     .footer-content {
@@ -294,10 +250,6 @@
     }
 }
 
-
-/* =========================
-   TABLET
-   ========================= */
 
 @media (max-width: 768px) {
     .footer-container {
@@ -360,10 +312,6 @@
     }
 }
 
-
-/* =========================
-   MOBILE
-   ========================= */
 
 @media (max-width: 480px) {
     .footer-container {

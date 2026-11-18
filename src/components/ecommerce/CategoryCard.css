@@ -44,7 +44,6 @@
   margin-top: 16px;
 }
 
-/* Tablet */
 @media (max-width: 1024px) {
   .category-circle {
     width: min(100px, 100%);
@@ -56,7 +55,6 @@
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .category-circle {
     width: min(80px, 100%);
