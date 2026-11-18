@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({
+  productId = "samsung-galaxy-s22-ultra",
   name,
   image,
   price,
@@ -14,7 +15,7 @@ function ProductCard({
   const hasDiscount = Boolean(discount);
   const hasSave = Boolean(saveText);
   return (
-    <Link to="/product-details" className={`product-card ${active ? "product-card-active" : ""}`}>
+    <Link to={`/product-details/${productId}`} className={`product-card ${active ? "product-card-active" : ""}`}>
       <div className="product-image-wrapper">
         <img src={image} alt={image} className="product-image" />
 
