@@ -14,7 +14,6 @@
     white-space: normal;
 }
 
-/* Header */
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +34,6 @@
     text-decoration: none;
 }
 
-/* Main content */
 .menu-content {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)) 220px;
@@ -68,7 +66,6 @@
     color: #008ecc;
 }
 
-/* Featured product */
 .featured-product {
     background: #f2f9fc;
     border-radius: 10px;
@@ -105,7 +102,6 @@
     font-size: 13px;
 }
 
-/* Popular brands */
 .popular-brands {
     display: flex;
     align-items: center;
@@ -127,7 +123,6 @@
     color: #008ecc;
 }
 
-/* Smaller screens */
 @media (max-width: 900px) {
     .mega-menu {
         width: calc(100vw - 24px);
