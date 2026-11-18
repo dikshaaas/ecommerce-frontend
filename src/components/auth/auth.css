@@ -1,6 +1,3 @@
-/* ==========================================================================
-   MegaMart Authentication Pages (Sign in / Sign up)
-   ========================================================================== */
 
 .auth-page {
   min-height: 100vh;
@@ -11,14 +8,14 @@
 }
 
 .auth-breadcrumb-wrap {
-  width: min(1040px, calc(100% - 64px));
+  width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
 }
 
 .auth-page .breadcrumb {
-  margin: 20px 0 24px 0;
+  margin: 38px 0 38px 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -30,28 +27,15 @@
   transition: color 0.15s ease;
 }
 
-.auth-page .breadcrumb a:hover {
-  color: #008ecc;
-}
-
 .auth-page .breadcrumb-separator {
   color: #94a3b8;
   font-size: 14px;
-}
-
-.auth-page .breadcrumb-current {
-  color: #008ecc;
-  font-weight: 500;
 }
 
 .auth-main {
   flex: 1;
   padding: 0 0 48px;
 }
-
-/* ==========================================================================
-   Two-column Main Auth Layout
-   ========================================================================== */
 
 .auth-layout {
   width: min(1040px, calc(100% - 64px));
@@ -62,10 +46,6 @@
   align-items: stretch;
   gap: clamp(40px, 6vw, 90px);
 }
-
-/* ==========================================================================
-   Left Column: Auth Promo Panel
-   ========================================================================== */
 
 .auth-promo {
   position: relative;
@@ -115,7 +95,6 @@
   line-height: 1.5;
 }
 
-/* Middle Promo Offer + Smartwatch */
 .auth-promo-middle {
   display: flex;
   align-items: center;
@@ -161,7 +140,6 @@
   filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.45));
 }
 
-/* Bottom Features List */
 .auth-promo-bottom {
   display: flex;
   flex-direction: column;
@@ -214,10 +192,6 @@
   line-height: 1.35;
 }
 
-/* ==========================================================================
-   Right Column: Auth Form Card
-   ========================================================================== */
-
 .auth-card {
   width: 100%;
   max-width: 420px;
@@ -242,7 +216,7 @@
   line-height: 1.45;
 }
 
-/* Tabs */
+
 .auth-tabs {
   display: flex;
   border-bottom: 1px solid #e2e8f0;
@@ -281,7 +255,6 @@
   border-radius: 2px 2px 0 0;
 }
 
-/* Form */
 .auth-form {
   display: flex;
   flex-direction: column;
@@ -327,7 +300,6 @@
   border-color: #ef4444;
 }
 
-/* Password Input */
 .auth-password-control {
   display: flex;
   align-items: center;
@@ -390,7 +362,6 @@
   line-height: 1.35;
 }
 
-/* Remember me and Forgot password */
 .auth-row-between {
   display: flex;
   align-items: center;
@@ -433,7 +404,6 @@
   text-decoration: underline;
 }
 
-/* Submit Button */
 .auth-submit {
   width: 100%;
   height: 48px;
@@ -461,7 +431,6 @@
   cursor: wait;
 }
 
-/* Switch */
 .auth-switch {
   margin: 4px 0 0;
   color: #64748b;
@@ -479,7 +448,6 @@
   text-decoration: underline;
 }
 
-/* Privacy & Trust Badge */
 .auth-privacy {
   display: flex;
   align-items: center;
@@ -497,9 +465,6 @@
   flex-shrink: 0;
 }
 
-/* ==========================================================================
-   Sign up Specific Styles
-   ========================================================================== */
 
 .auth-signup-card {
   padding: 8px 0;
@@ -556,9 +521,6 @@
   margin: 4px 0;
 }
 
-/* ==========================================================================
-   Compact Footer (Auth Pages)
-   ========================================================================== */
 
 .auth-page .footer-container--compact {
   background-color: #008ecc !important;
